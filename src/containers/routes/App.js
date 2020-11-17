@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
-import Todo from '../../components/todo/Todo'
+import Todo from '../todo/Todo'
 import '../../components/components.css'
 function App() {
   return (

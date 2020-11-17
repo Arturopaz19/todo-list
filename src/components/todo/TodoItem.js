@@ -12,7 +12,7 @@ function TodoItem (props) {
             </Col>
             <Col>
                {!started &&
-                  <Button className={'btn-success'}>Iniciar</Button>
+                  <Button variant='success' size='sm'>Iniciar</Button>
                }
             </Col>
          </Row>

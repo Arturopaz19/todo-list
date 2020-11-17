@@ -1,13 +1,22 @@
-import { useEffect, useState } from 'react'
+import React from 'react'
 import { tasks } from '../../helpers/tasks'
+import Todo from '../../components/todo/Todo'
 
-const useTodo = () => {
-   const [todos, setTodos] = useState([])
-   useEffect(()=>{
-      setTodos(tasks)
-      return () => {}
-   },[])
-   return todos
+export default class TodoContainer extends React.Component {
+   state = {
+      todoTask: []
+   }
+   
+   componentDidMount () {
+      this.setState({
+         todoTask: tasks
+      })
+   }
+
+   render () {
+      const { todoTask } = this.state
+      return (
+         <Todo todos={todoTask}/>
+      )
+   }
 }
-
-export default useTodo
